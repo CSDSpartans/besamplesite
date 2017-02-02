@@ -12,9 +12,17 @@ schedule = {
   }
   
   
+gameswon = int(input("How many games have you won? "))
+gameslost = int(input("How many games have you lost? "))
+gamesplayed = gameswon + gameslost
+
+
 def gamefinder():
-  gameswon = int(input("How many games have you won? "))
-  gameslost = int(input("How many games have you lost? "))
-  gamesplayed = gameswon + gameslost
   winpercent = gameswon / gamesplayed * 100
   print("Your win percentage is " + str(winpercent))
+
+
+
+def gamesleft():
+  numgamesleft = len(schedule) - gamesplayed
+  print("Number of games left is " + str(numgamesleft))
