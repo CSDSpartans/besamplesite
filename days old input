@@ -3,8 +3,12 @@
 from datetime import datetime
 from datetime import timedelta
 
-print('22000 days from today is:')
-print(datetime.now() + timedelta(days=22000))
+daysold = input("How many days old would you like to see? ")
+#daysold = 1500
+
+print(str(daysold) + ' days from today is:')
+
+print(datetime.now() + timedelta(days=int(daysold)))
 
 birthday = input("What is your birthday? YYYYMMDD \n")
 
@@ -16,4 +20,4 @@ day=int(birthday[6:8])
 print("Your birthday is "+str(year)+"/"+str(month)+"/"+str(day)+"?")
 #Maybe use an until loop here
 if input("(Y/n)") in ("Y","y","",None):
-    print(datetime(year,month,day)+timedelta(days=22000))
+    print(datetime(year,month,day)+timedelta(days=2000))
