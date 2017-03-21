@@ -4,9 +4,9 @@ file_input = open(name_of_mydocument, 'r')
 line = file_input.readline()                          
 print(line, end = "")
 line = file_input.readline()                         
-print(line)
+print(line, end = "")
 line = file_input.readline()                         
-print(line)
+print(line, end = "")
 
 line = file_input.readline()                          
 
