@@ -14,19 +14,21 @@ line_counter = 1
 stanza_counter = 1
 
 while line != '':                                     
-
     if line == '\n':                                    
       stanza_counter += 1                                      
       print ()                                              
     else:                                                
-      print(line_counter, end = '') 
-      print(")   ", end = "")
-      print(line, end = '') 
-      line_counter += 1                                    
+      print(line_counter, end = '')
+      if line_counter >= 10:
+        print(")  ", line, end = "")
+      else:
+        print(")   ", line, end = "")
+      line_counter += 1  
+                                    
     line = file_input.readline()                        
     
 print ()                                               
 print ()                         
 print ("The number of stanzas is ",  stanza_counter)   
 
-file_input.close()
+file_input.close()                        
